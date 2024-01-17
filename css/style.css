@@ -13,7 +13,7 @@ a {
 }
 
 a:hover {
-  color: #74c92d;
+  color: #fdf8e1;
   text-decoration: none;
 }
 
@@ -800,7 +800,7 @@ video {
 .contact .contact-info i {
   font-size: 48px;
   display: inline-block;
-  color: #003566;
+  color: #fdf8e1;
   cursor: pointer;
 }
 
@@ -808,11 +808,11 @@ video {
   font-size: 18px;
   font-weight: bold;
   text-transform: uppercase;
-  color: #003566;
+  color: #fdf8e1;
 }
 
 .contact .contact-info a {
-  color: #003566;
+  color: #fdf8e1;
 }
 
 .contact .contact-info a:hover {
