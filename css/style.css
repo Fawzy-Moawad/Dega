@@ -538,6 +538,14 @@ section {
   color: #fdf8e1;
 }
 
+.about {
+  background-image: url("../img/gallery/13.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .about .image {
   background: url("../img/about.jpg") center center no-repeat;
   background-size: cover;
@@ -777,6 +785,14 @@ video {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+  background-image: url("../img/contact.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
 .contact .contact-info {
   text-align: center;
 }
@@ -784,7 +800,7 @@ video {
 .contact .contact-info i {
   font-size: 48px;
   display: inline-block;
-  color: #c9b059;
+  color: #003566;
   cursor: pointer;
 }
 
@@ -796,11 +812,11 @@ video {
 }
 
 .contact .contact-info a {
-  color: #c9b059;
+  color: #003566;
 }
 
 .contact .contact-info a:hover {
-  color: #ffd60a;
+  color: #003566;
 }
 
 
