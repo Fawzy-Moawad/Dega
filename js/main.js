@@ -198,3 +198,4 @@ new Swiper('.gallery-slider', {
       }
   }
 });
+
