@@ -595,7 +595,7 @@ video {
 }
 
 /*--------------------------------------------------------------
-# Gallery Videos
+#Gallery Images
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   margin-bottom: 30px;
@@ -715,71 +715,6 @@ video {
 
 .gallery .gallery-wrap:hover .gallery-info {
   opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Gallery Images
---------------------------------------------------------------*/
-.gallery-details {
-  padding-top: 40px;
-}
-
-.gallery-details .gallery-details-slider img {
-  width: 100%;
-}
-
-.gallery-details .gallery-details-slider .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: #fff;
-  opacity: 1;
-  border: 1px solid #5c9f24;
-}
-
-.gallery-details .gallery-details-slider .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: #5c9f24;
-}
-
-.gallery-details .gallery-info {
-  padding: 30px;
-  box-shadow: 0px 0 30px rgba(42, 42, 42, 0.08);
-}
-
-.gallery-details .gallery-info h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.gallery-details .gallery-info ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.gallery-details .gallery-info ul li+li {
-  margin-top: 10px;
-}
-
-.gallery-details .gallery-description {
-  padding-top: 30px;
-}
-
-.gallery-details .gallery-description h2 {
-  font-size: 26px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.gallery-details .gallery-description p {
-  padding: 0;
 }
 
 /*--------------------------------------------------------------
