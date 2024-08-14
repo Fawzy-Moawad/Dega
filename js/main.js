@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -105,7 +104,7 @@
   }, true)
 
   /**
-   * Scrool with ofset on links with a class name .scrollto
+   * Scrool with offset on links with a class name .scrollto
    */
   on('click', '.scrollto', function(e) {
     if (select(this.hash)) {
@@ -123,7 +122,7 @@
   }, true)
 
   /**
-   * Scroll with ofset on page load with hash links in the url
+   * Scroll with offset on page load with hash links in the url
    */
   window.addEventListener('load', () => {
     if (window.location.hash) {
@@ -134,28 +133,60 @@
   });
 
   /*
- * Hero carousel indicators
- */
-let heroCarouselIndicators = select("#hero-carousel-indicators");
-let heroCarouselItems = select("#heroCarousel .carousel-item", true);
+   * Hero carousel indicators
+   */
+  let heroCarouselIndicators = select("#hero-carousel-indicators");
+  let heroCarouselItems = select("#heroCarousel .carousel-item", true);
 
-// Set a shorter interval for the carousel (e.g., 3 seconds)
-let carouselInterval = 3000;
+  // Set a shorter interval for the carousel (e.g., 3 seconds)
+  let carouselInterval = 3000;
 
-heroCarouselItems.forEach((item, index) => {
-  heroCarouselIndicators.innerHTML += `<li data-bs-target='#heroCarousel' data-bs-slide-to='${index}' class='${index === 0 ? 'active' : ''}'></li>`;
-});
+  heroCarouselItems.forEach((item, index) => {
+    heroCarouselIndicators.innerHTML += `<li data-bs-target='#heroCarousel' data-bs-slide-to='${index}' class='${index === 0 ? 'active' : ''}'></li>`;
+  });
 
-// Initiate the carousel with a custom interval
-let heroCarousel = new bootstrap.Carousel(select('#heroCarousel'), {
-  interval: carouselInterval
-});
+  // Initiate the carousel with a custom interval
+  let heroCarousel = new bootstrap.Carousel(select('#heroCarousel'), {
+    interval: carouselInterval
+  });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate gallery lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+  const galleryLightbox = GLightbox({
+    selector: '.glightbox',
+    touchNavigation: true,
+    closeButton: true
+  });
+
+  /**
+   * Initiate Isotope and filter
+   */
+  window.addEventListener('load', () => {
+    let galleryContainer = select('.gallery-container');
+    if (galleryContainer) {
+      let iso = new Isotope(galleryContainer, {
+        itemSelector: '.gallery-item',
+        layoutMode: 'fitRows'
+      });
+
+      let galleryFilters = select('#gallery-flters li', true);
+
+      on('click', '#gallery-flters li', function(e) {
+        e.preventDefault();
+        galleryFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        iso.arrange({
+          filter: this.getAttribute('data-filter')
+        });
+        iso.on('arrangeComplete', function() {
+          AOS.refresh();
+        });
+      }, true);
+    }
   });
 
   /**
@@ -163,7 +194,8 @@ let heroCarousel = new bootstrap.Carousel(select('#heroCarousel'), {
    */
   new PureCounter();
 
-})()
+})();
+
 /*video swiper*/
 new Swiper('.gallery-slider', {
   speed: 400,
@@ -198,4 +230,3 @@ new Swiper('.gallery-slider', {
       }
   }
 });
-
