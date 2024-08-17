@@ -539,7 +539,7 @@ section {
 }
 
 .about {
-  background-image: url("../img/gallery/pic-13.png");
+  background-image: url("../img/about.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -547,7 +547,7 @@ section {
 }
 
 .about .image {
-  background: url("../img/about.png") center center no-repeat;
+  background: url("../img/mostafa.png") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
