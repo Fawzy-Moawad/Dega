@@ -539,7 +539,7 @@ section {
 }
 
 .about {
-  background-image: url("../img/gallery/13.jpg");
+  background-image: url("../img/gallery/pic-13.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -547,7 +547,7 @@ section {
 }
 
 .about .image {
-  background: url("../img/about.jpg") center center no-repeat;
+  background: url("../img/about.png") center center no-repeat;
   background-size: cover;
   min-height: 500px;
 }
@@ -594,9 +594,67 @@ video {
   padding: 20px; /* Adjust as needed */
 }
 
+
+/*Content Creator*/
+
+.contentCreator-image-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.contentCreator-image-card img {
+  transition: transform 0.3s ease;
+  width: 100%; 
+  height: 175px; 
+  object-fit: cover; 
+}
+
+.contentCreator-image-card:hover img {
+  transform: scale(1.1);
+}
+
+.contentCreator-image-card .contentCreator-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.contentCreator-image-card:hover .contentCreator-card-overlay {
+  opacity: 1;
+}
+
+.contentCreator-image-card-text h5 {
+  color: #ffffff;
+}
+
+.contentCreator-image-card-text p {
+  color: #A8181B;
+  margin-top: 5px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.contentCreator-div-head h3 {
+  color: #262628;
+}
+
+
 /*--------------------------------------------------------------
 #Gallery Images
 --------------------------------------------------------------*/
+.gallery-heaader {
+  color: #fe7f2d;
+}
+
 .gallery .gallery-item {
   margin-bottom: 30px;
 }
@@ -721,7 +779,7 @@ video {
 # Contact
 --------------------------------------------------------------*/
 .contact {
-  background-image: url("../img/contact.jpg");
+  background-image: url("../img/contact.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
