@@ -235,7 +235,7 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #fe7f2d;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -244,7 +244,7 @@ h6 {
 }
 
 .mobile-nav-toggle.bi-x {
-  color: #5c9f24;
+  color: #fe7f2d;
 }
 
 @media (max-width: 991px) {
@@ -283,7 +283,7 @@ h6 {
   bottom: 15px;
   left: 15px;
   padding: 10px 0;
-  background-color: #fff;
+  background-color: #c9b059;
   overflow-y: auto;
   transition: 0.3s;
 }
@@ -292,13 +292,13 @@ h6 {
 .navbar-mobile a:focus {
   padding: 10px 20px;
   font-size: 15px;
-  color: #2a2a2a;
+  color: #fff;
 }
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
 .navbar-mobile li:hover>a {
-  color: #5c9f24;
+  color: #fe7f2d;
 }
 
 .navbar-mobile>ul>li {
@@ -359,103 +359,38 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background-color: rgba(17, 17, 17, 0.8);
   overflow: hidden;
   padding: 0;
 }
 
-#hero .carousel-item {
-  width: 100%;
+#hero .carousel-item img {
   height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: relative;
-  transition: 0.3;
+  object-fit: cover;
 }
 
-#hero .carousel-item::before {
-  content: "";
-  background-color: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
+#hero .carousel-caption {
+  bottom: 20%;
 }
 
-#hero .carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
-#hero .carousel-content {
-  text-align: center;
+#hero h2, #hero h5 {
+  color: #fdf8e1;
+  margin-bottom: 20px;
 }
 
 #hero h2 {
-  color: #fdf8e1;
-  margin-bottom: 30px;
   font-size: 48px;
   font-weight: 700;
-}
-
-#hero h2 span {
-  color: #5c9f24;
 }
 
 #hero h5 {
-  color: #fdf8e1;
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
-}
-
-#hero p {
-  width: 80%;
-  animation-delay: 0.4s;
-  margin: 0 auto 30px auto;
-  color: #fff;
-}
-
-#hero .carousel-inner .carousel-item {
-  transition-property: opacity;
-  background-position: center top;
-}
-
-#hero .carousel-inner .carousel-item,
-#hero .carousel-inner .active.carousel-item-start,
-#hero .carousel-inner .active.carousel-item-end {
-  opacity: 0;
-}
-
-#hero .carousel-inner .active,
-#hero .carousel-inner .carousel-item-next.carousel-item-start,
-#hero .carousel-inner .carousel-item-prev.carousel-item-end {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-#hero .carousel-inner .carousel-item-next,
-#hero .carousel-inner .carousel-item-prev,
-#hero .carousel-inner .active.carousel-item-start,
-#hero .carousel-inner .active.carousel-item-end {
-  left: 0;
-  transform: translate3d(0, 0, 0);
+  font-size: 24px;
+  font-weight: 500;
 }
 
 #hero .carousel-indicators li {
   list-style-type: none;
   cursor: pointer;
   background: #003566;
-  overflow: hidden;
-  border: 0;
   width: 12px;
   height: 12px;
   border-radius: 50px;
@@ -470,13 +405,25 @@ h6 {
 
 @media (max-width: 768px) {
   #hero h2 {
-    font-size: 28px;
+      font-size: 28px;
+  }
+
+  #hero h5 {
+      font-size: 18px;
+  }
+
+  #hero .carousel-caption {
+      bottom: 10%;
   }
 }
 
 @media (min-width: 1024px) {
-  #hero p {
-    width: 60%;
+  #hero h2 {
+      font-size: 64px;
+  }
+
+  #hero h5 {
+      font-size: 32px;
   }
 }
 
